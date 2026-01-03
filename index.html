@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Activity Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>2026 Activity Tracker</h1>
+            <p>Track random things said and done throughout 2026</p>
+        </header>
+        
+        <main>
+            <div class="user-counters">
+                <div class="user-card" data-user="yacine">
+                    <div class="user-info">
+                        <h3>Yacine</h3>
+                        <div class="counter-display">0</div>
+                    </div>
+                    <button class="increment-btn primary-btn">+</button>
+                </div>
+                
+                <div class="user-card" data-user="assistant">
+                    <div class="user-info">
+                        <h3>Assistant</h3>
+                        <div class="counter-display">0</div>
+                    </div>
+                    <button class="increment-btn primary-btn">+</button>
+                </div>
+                
+                <div class="user-card" data-user="sig">
+                    <div class="user-info">
+                        <h3>Sig</h3>
+                        <div class="counter-display">0</div>
+                    </div>
+                    <button class="increment-btn primary-btn">+</button>
+                </div>
+            </div>
+            
+            <div class="activity-section">
+                <h2>Random Activities in 2026</h2>
+                <div class="activity-list" id="activityList">
+                    <!-- Activities will be added here dynamically -->
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
