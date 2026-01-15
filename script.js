@@ -1,6 +1,6 @@
 class ActivityTracker {
     constructor() {
-        this.users = ['yacine', 'assistant', 'sig'];
+        this.users = ['yacine', 'assistant', 'sig', 'abdou', 'chaker', 'doua'];
         this.activities = JSON.parse(localStorage.getItem('activities')) || [];
         this.counters = JSON.parse(localStorage.getItem('counters')) || {
             yacine: 0,
@@ -59,6 +59,25 @@ class ActivityTracker {
     }
     
     incrementUserCounter(user) {
+        //if user is chaker increment by 2
+        if (user === 'chaker') {
+            this.counters[user] += 0.1;
+            
+        } else if (user === 'doua') {
+            this.counters[user] += 2;
+        } else if (user === 'abdou') {
+            this.counters[user] += 1;
+        } else if (user === 'sig') {
+            this.counters[user] += 5;
+        } else if (user === 'assistant') {
+            this.counters[user] += 3;
+        } else if (user === 'yacine') {
+            this.counters[user] += 1;
+        
+
+        } else {
+            this.counters[user]++;
+        }
         this.counters[user]++;
         
         // Save to localStorage
