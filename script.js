@@ -61,7 +61,7 @@ class ActivityTracker {
     incrementUserCounter(user) {
         //if user is chaker increment by 2
         if (user === 'chaker') {
-            this.counters[user] += 0.1;
+            this.counters[user] += 0.5;
             
         } else if (user === 'doua') {
             this.counters[user] += 2;
@@ -78,7 +78,7 @@ class ActivityTracker {
         } else {
             this.counters[user]++;
         }
-        this.counters[user]++;
+        // this.counters[user]++;
         
         // Save to localStorage
         localStorage.setItem('counters', JSON.stringify(this.counters));
@@ -114,7 +114,7 @@ class ActivityTracker {
     loadCounters() {
         this.users.forEach(user => {
             const userCard = document.querySelector(`[data-user="${user}"]`);
-            const counterDisplay = userCard.querySelector('.counter-display');
+            let counterDisplay = userCard.querySelector('.counter-display');
             counterDisplay.textContent = this.counters[user] || 0;
         });
     }
